@@ -1,0 +1,20 @@
+﻿@model IEnumerable<MVCPractice.Models.Product>
+@{
+    ViewBag.Title = "ProdList";
+}
+
+<h2>ProdList</h2>
+<div>
+    <ol>
+        @foreach (var item in Model)
+        {
+
+        <li>@Html.ActionLink(@item.Pname, "ProdDetails", new { id = item.Pid })</li>
+
+        }
+    </ol>
+</div>
+<div>
+    @Html.ActionLink("Back to Categories", "CatList", "CategoryList")
+</div>
+

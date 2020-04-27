@@ -1,0 +1,27 @@
+﻿@model MVCPractice.Models.Product
+@{
+    ViewBag.Title = "ProdDetails";
+}
+
+<h2>ProdDetails</h2>
+<div>
+    <table width="400" border="1">
+        <tr>
+            <td>ProductId</td>
+            <td>@Model.Pid</td>
+        </tr>
+        <tr>
+            <td>ProductName</td>
+            <td>@Model.Pname</td>
+        </tr>
+        <tr>
+            <td>ProductPrice</td>
+            <td>@Model.Pprice</td>
+        </tr>
+
+    </table>
+</div>
+<div>
+    @Html.ActionLink("Back to Products", "ProdList", new { id = Model.Cat_Cid })
+</div>
+
